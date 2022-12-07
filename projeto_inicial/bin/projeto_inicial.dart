@@ -20,4 +20,9 @@ void main() {
   print(comparacao);
   print(nome + apelido);
   print(frase);
+
+  List<String> listanomes = ['Ricarth', 'Natália', 'Alex', 'Ândriu', 'André'];
+  print(listanomes);
+  print(listanomes[0]);
+  print(listanomes.length);
 }
