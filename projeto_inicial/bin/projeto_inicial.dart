@@ -45,4 +45,8 @@ void main() {
 
   fraselista += "\nEu sou maior de idade? $maiorDeIdade";
   print(fraselista);
+
+  for (int i = 0; i < 5; i++) {
+    print('Concluí $i voltas');
+  }
 }
