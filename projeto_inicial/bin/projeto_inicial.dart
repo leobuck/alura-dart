@@ -25,4 +25,12 @@ void main() {
   print(listanomes);
   print(listanomes[0]);
   print(listanomes.length);
+
+  List<dynamic> leo = [24, 1.86, true, 'Leonardo', 'Leo'];
+  String fraselista = 'Eu sou ${leo[4]}, \n'
+      'mas meu nome completo é ${leo[3]}, \n'
+      'eu me considero geek? ${leo[2]}. \n'
+      'Eu tenho ${leo[1]} metros de altura e \n'
+      '${leo[0]} anos de idade.';
+  print(fraselista);
 }
