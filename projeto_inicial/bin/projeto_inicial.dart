@@ -35,4 +35,14 @@ void main() {
       'Eu tenho ${leo[1]} metros de altura e \n'
       '${leo[0]} anos de idade.';
   print(fraselista);
+
+  bool maiorDeIdade;
+  if (idade >= 18) {
+    maiorDeIdade = true;
+  } else {
+    maiorDeIdade = false;
+  }
+
+  fraselista += "\nEu sou maior de idade? $maiorDeIdade";
+  print(fraselista);
 }
