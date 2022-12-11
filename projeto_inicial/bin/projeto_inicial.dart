@@ -5,8 +5,10 @@ void main() {
   double exponencial = 780e6;
   bool geek = true;
   bool comparacao = idade == altura;
-  String nome = 'Leonardo';
-  String apelido = 'Leo';
+  const String nome = 'Leonardo';
+  final String apelido;
+  apelido = 'Leo';
+  // var variavel = 10;
   String frase = 'Eu sou $apelido, \n'
       'mas meu nome completo é $nome, \n'
       'eu me considero geek? $geek. \n'
@@ -26,7 +28,7 @@ void main() {
   print(listanomes[0]);
   print(listanomes.length);
 
-  List<dynamic> leo = [24, 1.86, true, 'Leonardo', 'Leo'];
+  List<dynamic> leo = [idade, altura, geek, nome, apelido];
   String fraselista = 'Eu sou ${leo[4]}, \n'
       'mas meu nome completo é ${leo[3]}, \n'
       'eu me considero geek? ${leo[2]}. \n'
