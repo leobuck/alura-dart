@@ -49,4 +49,16 @@ void main() {
   for (int i = 0; i < 5; i++) {
     print('Concluí $i voltas');
   }
+
+  int energia = 100;
+  while (energia > 0) {
+    print('Mais uma repetição');
+    energia = energia - 10;
+  }
+
+  energia = 100;
+  do {
+    print('Energia $energia');
+    energia = energia - 6;
+  } while (energia > 0);
 }
