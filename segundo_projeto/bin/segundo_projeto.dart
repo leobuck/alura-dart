@@ -7,8 +7,29 @@ void main() {
   bool isMadura = funcEstaMadura(diasDesdeColheita);
 
   // mostrarMadura("Uva", 40, cor: "Roxa");
-  int quantosDias = funcQuantosDiasMadura(diasDesdeColheita);
-  print(quantosDias);
+  // int quantosDias = funcQuantosDiasMadura(diasDesdeColheita);
+  // print(quantosDias);
+
+  Fruta fruta01 = Fruta(nome, peso, corFruta, sabor, diasDesdeColheita);
+  Fruta fruta02 = Fruta("Uva", 40, "Roxa", "Doce", 20);
+
+  print(fruta01.nome);
+  print(fruta01);
+  
+  print(fruta02.nome);
+  print(fruta02);
+}
+
+class Fruta {
+  String nome;
+  double peso;
+  String cor;
+  String sabor;
+  int diasDesdeColheita;
+  bool? isMadura;
+
+  Fruta(this.nome, this.peso, this.cor, this.sabor, this.diasDesdeColheita,
+      {this.isMadura});
 }
 
 // Função void
