@@ -15,9 +15,14 @@ void main() {
 
   print(fruta01.nome);
   print(fruta01);
-  
+
   print(fruta02.nome);
   print(fruta02);
+
+  fruta01.estaMadura(15);
+  fruta02.estaMadura(60);
+
+  print(fruta02.estaMadura(40));
 }
 
 class Fruta {
@@ -30,6 +35,12 @@ class Fruta {
 
   Fruta(this.nome, this.peso, this.cor, this.sabor, this.diasDesdeColheita,
       {this.isMadura});
+
+  estaMadura(int diasParaMadura) {
+    isMadura = diasDesdeColheita >= diasParaMadura;
+    print(
+        "A sua $nome foi colhida a $diasDesdeColheita dias, e precisa de $diasParaMadura para poder comer. Ela está madura? $isMadura.");
+  }
 }
 
 // Função void
