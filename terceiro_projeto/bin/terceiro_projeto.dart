@@ -7,6 +7,13 @@ void main() {
   registrosVisitados = registrarDestinos("Rio de Janeiro", registrosVisitados);
   registrosVisitados = registrarDestinos("São Paulo", registrosVisitados);
   print(registrosVisitados);
+
+  print(registrosVisitados.first);
+  print(registrosVisitados.last);
+  print(registrosVisitados.isEmpty);
+  print(registrosVisitados.contains("São Paulo"));
+  print(registrosVisitados.contains("Natal"));
+  
 }
 
 Set<String> registrarDestinos(String destino, Set<String> banco) {
