@@ -1,15 +1,21 @@
 void main() {
-  escolherMeioTransporteEnum(Transporte.carro);
+  escolherMeioTransporteEnum(Transporte.skate);
 }
 
 void escolherMeioTransporteEnum(Transporte locomocao) {
-  if (locomocao == Transporte.carro) {
-    print("Vou de CARRO para aventura!");
-  } else if (locomocao == Transporte.bike) {
-    print("Vou de BIKE para aventura!");
-  } else {
-    print("Vou para aventura!");
+  switch (locomocao) {
+    case Transporte.carro:
+      print("Vou de CARRO para aventura!");
+      break;
+    case Transporte.bike:
+      print("Vou de BIKE para aventura!");
+      break;
+    case Transporte.onibus:
+      print("Vou de BUSÃO para aventura!");
+      break;
+    default:
+      print("Estou indo para aventura, isso é o que importa!");
   }
 }
 
-enum Transporte { carro, bike, andando, skate, aviao, patins, trem }
+enum Transporte { carro, bike, andando, skate, aviao, patins, trem, onibus }
