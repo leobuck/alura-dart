@@ -1,8 +1,20 @@
 void main() {
-  escolherMeioTransporteEnum(Transporte.skate);
+  escolherMeioTransporte(Transporte.skate);
+
+  Set<String> registrosVisitados = <String>{};
+  registrosVisitados = registrarDestinos("São Paulo", registrosVisitados);
+  registrosVisitados = registrarDestinos("Recife", registrosVisitados);
+  registrosVisitados = registrarDestinos("Rio de Janeiro", registrosVisitados);
+  registrosVisitados = registrarDestinos("São Paulo", registrosVisitados);
+  print(registrosVisitados);
 }
 
-void escolherMeioTransporteEnum(Transporte locomocao) {
+Set<String> registrarDestinos(String destino, Set<String> banco) {
+  banco.add(destino);
+  return banco;
+}
+
+void escolherMeioTransporte(Transporte locomocao) {
   switch (locomocao) {
     case Transporte.carro:
       print("Vou de CARRO para aventura!");
