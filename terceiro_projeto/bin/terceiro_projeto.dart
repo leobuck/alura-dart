@@ -14,6 +14,17 @@ void main() {
   registrarPrecos["Nova York"] = "Muito Caro";
 
   print(registrarPrecos);
+
+  Viagem viagemHoje = Viagem();
+}
+
+class Viagem {
+  static String codigoTrabalho = "ABCD1234";
+  double dinheiro = 0;
+
+  printCodigo() {
+    print(codigoTrabalho);
+  }
 }
 
 Set<String> registrarDestinos(String destino, Set<String> banco) {
