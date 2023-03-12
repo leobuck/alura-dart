@@ -6,6 +6,7 @@ class Viagem {
   Transporte locomocao;
   Set<String> registrosVisitados = <String>{};
   Map<String, dynamic> registrarPrecos = {};
+  int _totalLocaisVisitados = 123;
 
   Viagem({required this.locomocao});
 
@@ -35,5 +36,9 @@ class Viagem {
 
   void registrarPrecoVisita(String local, dynamic preco) {
     registrarPrecos[local] = preco;
+  }
+
+  int get consultarTotalLocaisVisitados {
+    return _totalLocaisVisitados;
   }
 }
