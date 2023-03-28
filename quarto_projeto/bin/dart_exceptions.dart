@@ -25,11 +25,21 @@ import 'models/account.dart';
 // }
 
 void main() {
-  // double amount = double.parse("25,33");
-  recursiveFunc(1);
+  print("Started Main");
+  functionOne();
+  print("Finished Main");
 }
 
-recursiveFunc(int count) {
-  print(count);
-  recursiveFunc(count + 1);
+void functionOne() {
+  print("Started F01");
+  functionTwo();
+  print("Finished F01");
+}
+
+void functionTwo() {
+  print("Started F02");
+  for (int i = 1; i <= 5; i++) {
+    print(i);
+  }
+  print("Finished F02");
 }
