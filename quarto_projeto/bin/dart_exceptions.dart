@@ -32,7 +32,12 @@ void main() {
 
 void functionOne() {
   print("Started F01");
-  functionTwo();
+  try {
+    functionTwo();
+  } on FormatException {
+    print("Foi capturada dentro da functionOne.");
+  }
+
   print("Finished F01");
 }
 
