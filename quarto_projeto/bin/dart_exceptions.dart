@@ -36,18 +36,12 @@ void functionOne() {
   print("Started F01");
   try {
     functionTwo();
-  } on FormatException catch (e) {
-    print("Foi capturada dentro da functionOne.");
-    print(e.message);
-    print(e.source);
-    print(e.toString());
-  } on HttpException catch (e) {
-    print(e.toString());
-  } on IOException catch (e) {
-    print("Uma IOException foi encontrada.");
-    print(e.toString());
-  } on Exception catch (e) {
-    print(e.toString());
+  } catch (exception, stackTrace) {
+    print(exception);
+    print(stackTrace);
+    rethrow;
+  } finally {
+    print("Chegou no finally");
   }
 
   print("Finished F01");
