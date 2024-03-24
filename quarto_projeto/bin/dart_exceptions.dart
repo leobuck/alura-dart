@@ -18,6 +18,18 @@ testingNullSafety() {
       isAuthenticated: true,
     );
   }
+
+  print(myAccount.runtimeType);
+
+  // if (myAccount != null) {
+  //   print(myAccount.balance);
+  // } else {
+  //   print("Conta nula");
+  // }
+
+  // print(myAccount != null ? myAccount.balance : "Conta nula");
+
+  print(myAccount?.balance);
 }
 
 void main() {
