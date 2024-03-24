@@ -17,6 +17,7 @@ void main() {
 
   Account? myNullAccount;
   print(myNullAccount?.balance);
+  // print(myNullAccount!.balance);
 
   // Criando o banco
   BankController bankController = BankController();
