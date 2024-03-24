@@ -5,8 +5,18 @@ import 'exceptions/bank_controller_exceptions.dart';
 import 'models/account.dart';
 
 void main() {
-  print("MyString".runtimeType);
-  print(null.runtimeType);
+  // print("MyString".runtimeType);
+  // print(null.runtimeType);
+
+  String naoPodeSerNula = "MyString";
+  // naoPodeSerNula = null;
+  String? podeSerNula = "MyString";
+  print(podeSerNula.runtimeType);
+  podeSerNula = null;
+  print(podeSerNula.runtimeType);
+
+  Account? myNullAccount;
+  print(myNullAccount?.balance);
 
   // Criando o banco
   BankController bankController = BankController();
