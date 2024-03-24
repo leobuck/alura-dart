@@ -6,20 +6,20 @@ import 'exceptions/bank_controller_exceptions.dart';
 import 'models/account.dart';
 
 testingNullSafety() {
-  Account? myAccount;
+  Account? myAccount = Account(
+    name: "Leo",
+    balance: 200,
+    isAuthenticated: true,
+  );
 
   // Simulando uma comunicação externa
   Random random = Random();
   int randomNumber = random.nextInt(10);
   if (randomNumber <= 5) {
-    myAccount = Account(
-      name: "Leo",
-      balance: 200,
-      isAuthenticated: true,
-    );
+    myAccount.createdAt = DateTime.now();
   }
 
-  print(myAccount.runtimeType);
+  // print(myAccount.runtimeType);
 
   // if (myAccount != null) {
   //   print(myAccount.balance);
@@ -29,7 +29,17 @@ testingNullSafety() {
 
   // print(myAccount != null ? myAccount.balance : "Conta nula");
 
-  print(myAccount?.balance);
+  // print(myAccount?.balance);
+
+  print(myAccount.createdAt);
+
+  if (myAccount.createdAt != null) {
+    print(myAccount.createdAt!.day);
+  } else {
+    print("Data de criação vazia");
+  }
+
+  print(myAccount.createdAt?.day);
 }
 
 void main() {
