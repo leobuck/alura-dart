@@ -5,12 +5,15 @@ import 'exceptions/bank_controller_exceptions.dart';
 import 'models/account.dart';
 
 void main() {
+  print("MyString".runtimeType);
+  print(null.runtimeType);
+
   // Criando o banco
   BankController bankController = BankController();
 
   // Adicionando contas
   // Account accountTest =
-   //     Account(name: "Leo", balance: -20, isAuthenticated: true);
+  //     Account(name: "Leo", balance: -20, isAuthenticated: true);
 
   bankController.addAccount(
       id: "Ricarth",
