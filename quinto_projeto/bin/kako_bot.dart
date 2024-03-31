@@ -11,10 +11,10 @@ void main() async {
   var myStream = BotClock().kakoBotStream(1, 10);
   var subscriber = myStream.listen(
     (event) {
-      print('          KakoBot is activated for $event seconds');
+      print('          KakoBot está ativo a $event segundos...');
     },
     onDone: () {
-      print('KakoBot is finishing its work, ask the last question!');
+      print('KakoBot está sendo finalizado! Faça a ultima pergunta.');
       a = false;
     },
   );
